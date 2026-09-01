@@ -36,6 +36,28 @@ Arduino R4 WiFi -- HTTP --> FastAPI <-- MJPEG/JPEG -- Webcam ou ESP32-CAM
 
 Une explication détaillée est disponible dans [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
+## Organisation du dépôt
+
+```text
+app/
+├── api.py                 API FastAPI et gestion caméra
+├── ai/                    pipeline, cache et fournisseurs IA
+└── static/                tableau de bord web
+db/
+└── schema.sql             schéma SQLite reproductible
+docs/                      architecture et documentation technique
+firmware/
+├── arduino_r4/            détection et commande des moteurs
+└── esp32_cam/             capture et flux MJPEG
+scripts/                   initialisation et diagnostic matériel
+tests/                     tests automatisés
+run.py                     lanceur Python multiplateforme
+run_ubuntu.sh              raccourci Ubuntu
+run_windows.ps1            raccourci Windows
+```
+
+Les répertoires `data/`, `db/` et `memory_store/` peuvent contenir des données locales à l'exécution. Leurs contenus générés sont exclus de Git.
+
 ## Installation Ubuntu
 
 ```bash
@@ -133,7 +155,7 @@ La documentation interactive est disponible sur `/docs` pendant l'exécution.
 ## Tests
 
 ```bash
-.venv/bin/python -m compileall -q run.py server ia scripts tests
+.venv/bin/python -m compileall -q run.py app scripts tests
 .venv/bin/python -m unittest discover -s tests -v
 ```
 

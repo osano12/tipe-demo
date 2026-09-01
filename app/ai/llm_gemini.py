@@ -11,7 +11,7 @@ import requests
 
 from .llm_ollama import build_prompt, extract_first_json, fallback_result, validate_ollama_json
 
-LOGGER = logging.getLogger("ia.llm_gemini")
+LOGGER = logging.getLogger("smart_waste.ai.llm_gemini")
 
 
 class GeminiVisionClient:

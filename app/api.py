@@ -19,15 +19,15 @@ from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 
-from ia.pipeline import WastePipeline
+from app.ai.pipeline import WastePipeline
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
 DB_PATH = ROOT / "db" / "app.db"
 SCHEMA_PATH = ROOT / "db" / "schema.sql"
-STATIC_DIR = ROOT / "server" / "static"
+STATIC_DIR = ROOT / "app" / "static"
 CAPTURES_DIR = ROOT / "data" / "captures"
-LOGGER = logging.getLogger("tipe.server")
+LOGGER = logging.getLogger("smart_waste.api")
 ALLOWED_LABELS = {"bio", "recyclable", "waste", "inconnu"}
 
 

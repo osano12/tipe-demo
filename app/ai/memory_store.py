@@ -12,9 +12,9 @@ Chaque objet appris est identifié par son dHash, et on dedoublonne pour éviter
 On peut facilement ajouter de nouveaux objets appris, et le systÃ¨me gÃ¨re automatiquement les mises Ã  jour du fichier de mémoire."""
 
 
-LOGGER = logging.getLogger("ia.memory_store")
-ROOT = Path(__file__).resolve().parent
-DEFAULT_MEMORY_PATH = ROOT.parent / "memory_store" / "learned_objects.json"
+LOGGER = logging.getLogger("smart_waste.ai.memory_store")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_MEMORY_PATH = PROJECT_ROOT / "memory_store" / "learned_objects.json"
 
 
 def _utc_now_iso() -> str:

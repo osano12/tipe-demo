@@ -9,9 +9,9 @@ from pathlib import Path
 from typing import Any
 
 
-LOGGER = logging.getLogger("ia.dataset_store")
-ROOT = Path(__file__).resolve().parent
-DEFAULT_DATASET_DIR = ROOT.parent / "dataset"
+LOGGER = logging.getLogger("smart_waste.ai.dataset_store")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_DATASET_DIR = PROJECT_ROOT / "data" / "dataset"
 
 
 def _sanitize_fragment(value: Any, default: str) -> str:
@@ -101,5 +101,4 @@ def save_dataset_sample(
 ) -> dict[str, str]:
     store = DatasetStore(dataset_dir, logger=logger)
     return store.save_sample(image=image, result=result, dhash=dhash, source=source)
-
 

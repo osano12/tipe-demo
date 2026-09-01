@@ -19,7 +19,7 @@ else:
     _FAISS_IMPORT_ERROR = None
 
 
-LOGGER = logging.getLogger("ia.cache_store")
+LOGGER = logging.getLogger("smart_waste.ai.cache_store")
 
 CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS waste_cache (
@@ -293,6 +293,5 @@ class WasteCacheStore:
             raise RuntimeError("Insertion cache echouee (relecture impossible).")
         self.logger.info(f"DEBUG SQL: Objet '{objet}' inséré avec ID {row_id} et Hash {phash}")
         return row
-
 
 

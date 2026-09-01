@@ -24,6 +24,6 @@ La décision et ses métadonnées sont enregistrées dans SQLite. Les exemples f
 
 ## Choix multiplateforme
 
-`server/main.py` reste la seule implémentation du serveur. `run.py` applique une configuration identique sur Linux et Windows. Les scripts `run_ubuntu.sh` et `run_windows.ps1` ne font qu'utiliser l'interpréteur du virtualenv propre à chaque système.
+`app/api.py` reste la seule implémentation du serveur. `app/ai/` regroupe le pipeline, les fournisseurs et les stockages associés. `app/static/` contient l'interface. `run.py` applique une configuration identique sur Linux et Windows. Les scripts `run_ubuntu.sh` et `run_windows.ps1` ne font qu'utiliser l'interpréteur du virtualenv propre à chaque système.
 
 Cette organisation évite de maintenir deux backends qui pourraient diverger.

@@ -51,7 +51,7 @@ def main() -> None:
         print(f"Avertissement : système {system} non testé.", file=sys.stderr)
     print(f"Poubelle IA · {system} · {args.ai} · caméra {args.camera}")
     print(f"Interface : http://{args.host}:{args.port}")
-    uvicorn.run("server.main:app", host=args.host, port=args.port, reload=args.reload)
+    uvicorn.run("app.api:app", host=args.host, port=args.port, reload=args.reload)
 
 
 if __name__ == "__main__":

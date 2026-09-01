@@ -29,7 +29,7 @@ else:
     _PIL_IMPORT_ERROR = None
 
 
-LOGGER = logging.getLogger("ia.llm_ollama")
+LOGGER = logging.getLogger("smart_waste.ai.llm_ollama")
 
 # ---- Config ----
 CONFIDENCE_THRESHOLD = 0.70
@@ -430,4 +430,3 @@ class OllamaVisionClient:
         fb["raw"] = content
         fb["llm_time_seconds"] = round(time.perf_counter() - started, 3)
         return fb
-

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from ia.llm_ollama import extract_first_json, validate_ollama_json
+from app.ai.llm_ollama import extract_first_json, validate_ollama_json
 
 
 class LlmValidationTests(unittest.TestCase):

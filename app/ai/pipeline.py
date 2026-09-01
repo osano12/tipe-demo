@@ -16,7 +16,7 @@ from .llm_gemini import GeminiVisionClient
 from .llm_ollama import OllamaVisionClient
 from .memory_store import LearnedObjectMemoryStore
 
-LOGGER = logging.getLogger("ia.pipeline")
+LOGGER = logging.getLogger("smart_waste.ai.pipeline")
 
 
 class WastePipeline:

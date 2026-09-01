@@ -16,7 +16,7 @@ python scripts/init_db.py
 Avant une pull request :
 
 ```bash
-python -m compileall -q run.py server ia scripts tests
+python -m compileall -q run.py app scripts tests
 python -m unittest discover -s tests -v
 ```
 
