@@ -1,0 +1,13 @@
+agent.md
+.venv/
+__pycache__/
+*.py[cod]
+.env
+logs.txt
+*.sqlite3
+*.db
+data/captures/*
+data/dataset/*
+!data/captures/.gitkeep
+!data/dataset/.gitkeep
+memory_store/learned_objects.json

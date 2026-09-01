@@ -1,0 +1,31 @@
+name: Signaler un bug
+description: Signaler un comportement reproductible
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Décrivez le problème et le résultat attendu.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Indiquez les commandes et étapes minimales.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environnement
+      description: OS, version Python, caméra et fournisseur IA.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Journaux utiles
+      render: shell
