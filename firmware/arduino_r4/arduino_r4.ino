@@ -108,14 +108,14 @@ void loop() {
     int steps = 0;
     if (res == "bio") {
       steps = POS_BIO;
-      Serial.println("🟢 BIO");
+      Serial.println(" BIO");
       rotateOneWay(steps * 8);
     } else if (res == "recyclable") {
       steps = POS_RECYC;
-      Serial.println("🔵 RECYCLABLE");
+      Serial.println(" RECYCLABLE");
       rotateOneWay(steps * 8);
     } else {
-      Serial.println("🔴 WASTE (tout-venant, pas de rotation)");
+      Serial.println(" WASTE (tout-venant, pas de rotation)");
     }
 
     // ÉJECTION via servos
@@ -129,7 +129,7 @@ void loop() {
       rotateOtherWay(steps * 8);
     }
 
-    Serial.println("✅ CYCLE TERMINÉ – Attente 5s anti-rebond...");
+    Serial.println(" CYCLE TERMINÉ – Attente 5s anti-rebond...");
     delay(5000); // Anti-rebond : évite de relancer un cycle pendant la phase mécanique
   }
 }
